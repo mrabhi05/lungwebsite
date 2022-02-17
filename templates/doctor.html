@@ -17,8 +17,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="static/css/styles.css" rel="stylesheet" />
-
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -50,15 +51,15 @@
         <!-- Mashead header-->
         <header class="masthead" id="home">
         <div class="container">
-                
-            <!-- Nav tabs -->
+<!--
+            Nav tabs
             <nav>
                 <ul class="nav nav-tabs" id="myTab" role="tablist" >
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="profile" aria-selected="treu">Profile</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Profile</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="nav-messages-tab" data-bs-toggle="tab" data-bs-target="#nav-messages" type="button" role="tab" aria-controls="messages" aria-selected="true">Messages</button>
@@ -67,9 +68,8 @@
                         <button class="nav-link" id="nav-settings-tab" data-bs-toggle="tab" data-bs-target="#nav-settings" type="button" role="tab" aria-controls="settings" aria-selected="true">Settings</button>
                     </li>
                 </ul>
-            </nav>
-            <!-- Tab panes -->
-            <div class="tab-content" id="nav-tabContent">
+
+                <div class="tab-content" id="nav-home">
                 <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
                     <form>
@@ -139,7 +139,140 @@
 
                 </div>
             </div>
-                        
+            <div class="tab-content" id="nav-profile">
+                <div class="tab-pane fade show active p-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <form>
+                        <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">1</div>
+                        </div>
+                    
+                        <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+                <div class="tab-pane fade p-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <form>
+                        <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">2</div>
+                        </div>
+                    
+                        <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+                <div class="tab-pane fade p-3" id="nav-messages" role="tabpanel" aria-labelledby="nav-messages-tab">
+
+                    <form>
+                        <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">3</div>
+                        </div>
+                    
+                        <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+                <div class="tab-pane fade p-3" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+
+                    <form>
+                        <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">4</div>
+                        </div>
+                    
+                        <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+            </nav>
+            Tab panes
+-->                    
+              
+<form name="quote" id="price-quote">
+    <div class="container">
+      <div id="service-tabs" class="container">
+        <ul class="nav nav-pills">
+          <li class="active"><a href="#carpet-cleaning" data-toggle="tab">Basic Details</a></li>
+          <li><a href="#upholstery-cleaning" data-toggle="tab">Upholstery Cleaning</a></li>
+        </ul>
+  
+        <div class="tab-content clearfix">
+          <div class="tab-pane active" id="carpet-cleaning">
+            <div class="mb-3 mt-4">                        
+                <!-- First Name-->
+                <label for="exampleInputName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="NamelHelp">
+            </div>
+            <div class="mb-3">                        
+                <!-- Last Name-->
+                <label for="exampleInputName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="NamelHelp">
+            </div>
+            <div class="mb-3">                        
+                <!--Email-->
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">                        
+                <!--Confirm Email-->
+                <label for="exampleInputEmail1" class="form-label">Confirm Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">                        
+                <!--Gender-->
+                <label for="exampleInputEmail1" class="form-label">Gender</label>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                        <label class="btn btn-outline-primary" for="btnradio1">Doctor</label>
+                                      
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="btnradio2">Patient</label>
+                </div>                        
+            </div>  
+          </div>
+  
+          <div class="tab-pane" id="upholstery-cleaning">
+            <h3>Upholstery Cleaning Options</h3>
+            <!--how many dining room chairs-->
+            <label class="control-label" for="dining_chairs_cleaning">Dining Room Chairs (each)</label>
+            <br>
+            <select class="form-control-1" id="dining_chairs_cleaning">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
         </div>
         </header>
 
